@@ -1,0 +1,60 @@
+<?php 
+	define("TOKEN", "zhoudongs");
+	include "../weichat.class.php";
+	$weichat = new weiChat('wx587e0f9288074306','41ae7ff161874c170516dbae4b2fdc49');
+	$data = '{
+	     "button":[
+	     {	
+	          "type":"click",
+	          "name":"周冬领域",
+	          "key":"NEWS"
+	      },
+	      {
+	           "name":"欢乐时光",
+	           "sub_button":[
+	           {	
+	               "type":"view",
+	               "name":"搜索",
+	               "url":"http://www.runoob.com/"
+	            },
+	            {
+	               "type":"view",
+	               "name":"视频",
+	               "url":"http://v.runoob.com/"
+	            },
+	            {
+	               "type":"click",
+	               "name":"赞一下我们",
+	               "key":"ZHOUDONG"
+	            }]
+	       },{	
+            	"name":"五杀超神",
+	           "sub_button":[
+	           {	
+	               "type":"view",
+	               "name":"起名神器",
+	               "url":"http://www.afefgrw.top/wxkf/web/name.html"
+	            },
+                	{
+	               "type":"view",
+	               "name":"皮肤·壁纸",
+	               "url":"http://www.afefgrw.top/wxkf/web/index.html"
+	            },
+	            {
+	               "type":"view",
+	               "name":"五黑·表情包",
+	               "url":"http://www.afefgrw.top/wxkf/web/bag.html"
+	            },
+             	{
+	               "type":"view",
+	               "name":"图片生成器",
+	               "url":"http://www.afefgrw.top/wxkf/web/wxsq.php"
+	            },
+	            {
+	               "type":"click",
+	               "name":"图片列表",
+	               "key":"ZAN"
+	            }]
+	      }]
+	 }';
+	$arr = $weichat->mune_create($data);

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>需求2</title> 
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> 
+  <meta name="author" content="" /> 
+ <link rel="stylesheet" type="text/css" href="css/zt_main_web.css">
+ 
+</head>
+<script type="text/javascript">
+	// 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+    	var useragent = navigator.userAgent;
+     	if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+         	// 这里警告框会阻塞当前页面继续加载
+        	alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
+         	// 以下代码是用javascript强行关闭当前页面
+        	var opened = window.open('about:blank', '_self');
+       	opened.opener = null;
+         	opened.close();
+     	}
+ </script>
+<body class="wushen_bg">
+
+<div class="role_name">
+ <img src="images/1.jpg" >
+ </div>
+
+<p class="fengx"><img src="images/wushen_l.jpg">王者荣耀起名字神器<img src="images/wushen_r.jpg"></p>
+
+<p class="w_90 role_fz"><input type="text"  class="role_fz_text" value=""><button type="button" class="name_fz" onClick="copyUrl2()">复制</button></p>
+
+<p class="text_center"><button type="button" class="wushen_btn name_sc">立即生成</button><button type="button" class="wushen_btn name_ql">情侣名生成</button></p>
+
+
+<div class="name_tit">
+<p class="tit">使用规则</p>
+
+
+1.每次进入，系统会随机生成名称显示<br>
+
+2.若不满意名称，点击立即生成，随机再生产名字
+<br>
+3.若需要情侣名字请点击情侣名生成<br>
+<p class="tit">最近生成（长按名字进行复制）</p>
+<p class="newsusername">
+ </p>
+ <p class="tit">热门名字（长按名字进行复制）</p>
+<p class="hotname">
+<span>The.End ﹏</span>
+<span>轨迹</span>
+<span>Palma</span>
+<span>grievance</span>
+
+</p>
+ 
+ </div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/weixin.js"></script>
+ 
+</body>
+
+</html>

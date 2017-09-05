@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>皮肤·壁纸</title> 
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> 
+  <meta name="author" content="" /> 
+ <link rel="stylesheet" type="text/css" href="css/zt_main_web.css">
+   
+   
+</head>
+<script type="text/javascript">
+	// 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+    	var useragent = navigator.userAgent;
+     	if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+         	// 这里警告框会阻塞当前页面继续加载
+        	alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
+         	// 以下代码是用javascript强行关闭当前页面
+        	var opened = window.open('about:blank', '_self');
+       	opened.opener = null;
+         	opened.close();
+     	}
+</script>
+
+<body>
+<div class="web_main">
+    <ul class="img_down clear"></ul>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</body>
+<script src="js/config.js"></script>
+<script src="js/weixin.js"></script>
+</html>
